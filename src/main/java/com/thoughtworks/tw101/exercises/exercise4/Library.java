@@ -12,5 +12,14 @@ public class Library {
     }
 
     public void printBooksContaining(String partialBookTitle) {
+
+        System.out.println("Checking substring: " + partialBookTitle);
+
+        for (int i=0; i<books.length; i++) {
+            if(books[i].toLowerCase().contains(partialBookTitle.toLowerCase())) {
+                System.out.println(books[i]);
+            }
+        }
+        System.out.println("");
     }
 }
