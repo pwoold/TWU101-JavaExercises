@@ -4,11 +4,11 @@ public class Accumulator {
 
     private int count;
 
-    void increment() {
+    public void increment() {
         count++;
     }
 
-    void total() {
+    public void total() {
         System.out.println(count);
     }
 }
