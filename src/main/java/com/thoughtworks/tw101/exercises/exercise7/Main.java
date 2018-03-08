@@ -8,5 +8,16 @@ public class Main {
 
     public static void main(String[] args) {
 
+        MakeGuess firstGuesser = new MakeGuess();
+        int userGuess = firstGuesser.promptUser();
+
+        GuessChecker checker = new GuessChecker(userGuess);
+        int compareValue = checker.compareNumberToGuess();
+
+        Loop newLoop = new Loop(compareValue, checker);
+        newLoop.runLoop();
+
+        System.out.println("You got it!");
+
     }
 }
