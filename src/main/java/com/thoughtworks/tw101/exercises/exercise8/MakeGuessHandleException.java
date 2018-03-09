@@ -25,7 +25,7 @@ public class MakeGuessHandleException {
         }
     }
 
-    public int findGuess(Scanner userInput) {
+    public int findGuess(Scanner userInput) throws NumberFormatException {
         promptUser();
         String userGuessUnParsed = userInput.nextLine();
         int userGuess = 0;
