@@ -25,7 +25,8 @@ public class MakeGuess {
 
     public int findGuess(Scanner userInput) {
         promptUser();
-        int userGuess = userInput.nextInt();
+        String userGuessUnParsed = userInput.nextLine();
+        int userGuess = Integer.parseInt(userGuessUnParsed);
         return userGuess;
     }
 }
