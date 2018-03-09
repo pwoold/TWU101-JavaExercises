@@ -14,6 +14,10 @@ public class GuessChecker {
     }
 
     public void updateGuess(Integer newGuess) {
-        this.userGuess = newGuess;
+        userGuess = newGuess;
+    }
+
+    public int getNumberToGuess() {
+        return NUMBER_TO_GUESS;
     }
 }
