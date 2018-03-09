@@ -4,20 +4,26 @@ package com.thoughtworks.tw101.exercises.exercise7;
 // right then tell them they win, otherwise tell them if they guessed too high or low. Keep asking the user to guess
 // until they get the right answer. Use classes to separate the different concerns of this program.
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
 
+        Scanner userInput = new Scanner(System.in);
+
         MakeGuess firstGuesser = new MakeGuess();
-        int userGuess = firstGuesser.promptUser();
+        int userGuess = firstGuesser.findGuess(userInput);
 
         GuessChecker checker = new GuessChecker(userGuess);
         int compareValue = checker.compareNumberToGuess();
 
-        Loop newLoop = new Loop(compareValue, checker);
-        newLoop.runLoop();
+        PlayLoop newLoop = new PlayLoop(compareValue, checker);
+        newLoop.runLoop(userInput);
 
         System.out.println("You got it!");
+
+        userInput.close();
 
     }
 }

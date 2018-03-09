@@ -1,21 +1,23 @@
 package com.thoughtworks.tw101.exercises.exercise7;
 
-public class Loop {
+import java.util.Scanner;
 
-    int compareValue;
-    GuessChecker checker;
+public class PlayLoop {
 
-    public Loop(int compareValue, GuessChecker checker) {
+    private int compareValue;
+    private GuessChecker checker;
+
+    public PlayLoop(int compareValue, GuessChecker checker) {
         this.compareValue = compareValue;
         this.checker = checker;
     }
 
-    public void runLoop() {
+    public void runLoop(Scanner userInput) {
 
         while (compareValue != 0) {
 
             MakeGuess nextGuesser = new MakeGuess(compareValue);
-            int nextGuess = nextGuesser.promptUser();
+            int nextGuess = nextGuesser.findGuess(userInput);
             checker.updateGuess(nextGuess);
             compareValue = checker.compareNumberToGuess();
         }
