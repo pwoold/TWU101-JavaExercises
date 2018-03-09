@@ -1,6 +1,5 @@
 package com.thoughtworks.tw101.exercises.exercise8;
 import com.thoughtworks.tw101.exercises.exercise7.GuessChecker;
-import com.thoughtworks.tw101.exercises.exercise7.MakeGuess;
 
 import java.util.Scanner;
 
@@ -20,7 +19,7 @@ public class NewPlayLoop {
 
         while (compareValue != 0) {
 
-            MakeGuess nextGuesser = new MakeGuess(compareValue);
+            MakeGuessHandleException nextGuesser = new MakeGuessHandleException(compareValue);
             int nextGuess = nextGuesser.findGuess(userInput);
             recorder.addGuess(nextGuess);
             checker.updateGuess(nextGuess);

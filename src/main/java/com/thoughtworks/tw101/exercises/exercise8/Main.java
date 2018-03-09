@@ -5,7 +5,6 @@ package com.thoughtworks.tw101.exercises.exercise8;
 // where the user entered a String that is not parseable.
 
 import com.thoughtworks.tw101.exercises.exercise7.GuessChecker;
-import com.thoughtworks.tw101.exercises.exercise7.MakeGuess;
 import java.util.Scanner;
 
 public class Main {
@@ -14,7 +13,7 @@ public class Main {
         Scanner userInput = new Scanner(System.in);
         GuessRecorder recorder = new GuessRecorder();
 
-        MakeGuess firstGuesser = new MakeGuess();
+        MakeGuessHandleException firstGuesser = new MakeGuessHandleException();
         int userGuess = firstGuesser.findGuess(userInput);
         recorder.addGuess(userGuess);
 
