@@ -30,7 +30,7 @@ public class TriangleExercises {
 //            *
     private static void drawAVerticalLine(int n) {
         for(int i=0; i<n; i++){
-            System.out.println("*");
+            drawAnAsterisk();
         }
     }
 
@@ -42,7 +42,7 @@ public class TriangleExercises {
 //            ***
     private static void drawARightTriangle(int n) {
         for(int i=0; i<n; i++) {
-            System.out.println(new String(new char[i+1]).replace("\0", "*"));
+            drawAHorizontalLine(i+1);
         }
     }
 }
